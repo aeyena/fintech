@@ -57,9 +57,42 @@ body {
   padding: 30px;
   font-weight: 700;
   margin-top: 68px;
-  margin-left: 65px;
+  margin-left: 89px;
 }
 
 .xIcon {
-  margin-right: 45px;
+  margin-right: 80px;
+}
+
+.img-upload-btn {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  background: #11b7e4;
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  border: none;
+  margin: 30px 60px;
+}
+
+.list {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-upload {
+  width: 80px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.space {
+  width: 80px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
