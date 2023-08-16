@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 540px) {
+  .container {
+    width: 50%;
+  }
+}
+
+body {
+  font-family: "nanumsquare";
+}
+
+.representativeImage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.representativeImage h2 {
+  padding: 30px;
+  font-weight: 700;
+  margin-top: 68px;
+  margin-left: 65px;
+}
+
+.xIcon {
+  margin-right: 45px;
+}

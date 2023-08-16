@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import { useRef, useState } from "react";
 
 function App() {
+  const inputRef = useRef(null);
+
+  const handleImageClick = () => {
+    inputRef.current.click();
+  };
+
+  const handleImageChange = () => {
+    inputRef.current.click();
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="representativeImage">
+        <h2>대표이미지</h2>
+        <div className="xIcon">
+          <FontAwesomeIcon icon={faX} size="xl" />
+        </div>
+      </div>
+
+      <div onClick={handleImageClick}>
+        <img src="./upload.png" alt=""></img>
+        <input
+          type="file"
+          ref={inputRef}
+          onchange={handleImageChange}
+          style={{ display: "none" }}
+        ></input>
+      </div>
     </div>
   );
 }
