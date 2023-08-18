@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, Button, Form, Container } from "react-bootstrap";
+import styles from "./ImageUpModal.css";
 
 const ImageUpModal = ({ show, onHide }) => {
+  const [imgBorder, setImageBorder] = useState(false);
+  let className = "border";
+  if (imgBorder) {
+    className = "img_upload_box";
+  }
+
+  function imgClick() {
+    if (!imgBorder) {
+      setImageBorder(true);
+    } else {
+      setImageBorder(false);
+    }
+  }
+
   return (
     <Modal
       show={show}
@@ -17,20 +32,57 @@ const ImageUpModal = ({ show, onHide }) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <div className="img_list">
+            <div className={className}>
+              <img
+                onClick={imgClick}
+                className="img_upload"
+                src="./Gangnam.jpg"
+                width="91"
+              ></img>
+            </div>
+
+            {[1, 2, 3].map(function () {
+              return (
+                <div className="img_upload_space">
+                  <img src="./upload.png" />
+                </div>
+              );
+            })}
+
+            {[1, 2, 3, 4].map(function () {
+              return (
+                <div className="img_space">
+                  <img src="./upload.png" />
+                </div>
+              );
+            })}
+
+            {[1, 2, 3, 4].map(function () {
+              return (
+                <div className="img_space">
+                  <img src="./upload.png" />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* <Form>
             <Form.Group controlId="formBasicImage">
               <Form.Label>Image file</Form.Label>
               <Form.Control type="file" placeholder="Upload Image" />
             </Form.Group>
-          </Form>
+          </Form> */}
         </Modal.Body>
-
+      </Container>
+      <Container>
         <Modal.Footer>
-          <Button block variant="info" type="button">
+          <Button className="img_btn" block variant="info" type="button">
             대표 이미지 변경 완료
           </Button>
         </Modal.Footer>
       </Container>
+      {/* </Container> */}
     </Modal>
   );
 };
