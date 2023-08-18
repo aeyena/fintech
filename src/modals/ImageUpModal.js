@@ -66,13 +66,6 @@ const ImageUpModal = ({ show, onHide }) => {
               );
             })}
           </div>
-
-          {/* <Form>
-            <Form.Group controlId="formBasicImage">
-              <Form.Label>Image file</Form.Label>
-              <Form.Control type="file" placeholder="Upload Image" />
-            </Form.Group>
-          </Form> */}
         </Modal.Body>
       </Container>
       <Container>
@@ -82,7 +75,6 @@ const ImageUpModal = ({ show, onHide }) => {
           </Button>
         </Modal.Footer>
       </Container>
-      {/* </Container> */}
     </Modal>
   );
 };
